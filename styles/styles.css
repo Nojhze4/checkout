@@ -1,0 +1,215 @@
+/* ======== GENERAL ======== */
+body {
+  background-color: #DFEAFF;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ======== NAVBAR ======== */
+.navbar {
+  background: linear-gradient(to right, white 15%, #DFEAFF 85%);
+}
+
+.navbar-brand img {
+  height: 40px;
+}
+
+.navbar-nav {
+  gap: 2rem;
+  margin-left: 3rem;
+}
+
+.nav-link {
+  color: #2e3a75 !important;
+  font-weight: 500;
+  font-size: 15px;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #6e80ff !important;
+}
+
+.btn-light {
+  color: #555;
+  background-color: transparent;
+  border: none;
+  margin-right: 1rem;
+  font-weight: 500;
+}
+
+.btn-light:hover {
+  color: #6e80ff;
+}
+
+.btn-primary {
+  background-color: #6e80ff;
+  border: none;
+  border-radius: 12px;
+  padding: 6px 18px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.btn-primary:hover {
+  background-color: #5b6ee0;
+}
+
+/* ======== CONTENEDOR DE PEDIDOS ======== */
+.pedido-productos {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+.pedido-productos h2 {
+  color: #2e3a75;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* ======== PRODUCTO ITEM ======== */
+.producto-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid #e4e7ff;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  position: relative; 
+}
+
+/* Efecto hover (resaltado azul) */
+.producto-item:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+/* ======== IMAGEN DEL PRODUCTO ======== */
+.producto-item img:first-child {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+
+/* ======== DETALLES ======== */
+.producto-detalle {
+  flex: 1;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.producto-nombre {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1c2350;
+  margin: 0;
+  padding-right: 60px;
+}
+
+.producto-rating {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 14px;
+  color: #f5c518;
+  font-weight: 600;
+}
+
+/* ======== CANTIDAD Y BOTONES ======== */
+.producto-cantidad {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+
+.qty-btn {
+  background-color: #dfe3ff;
+  color: #2e3a75;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.qty-btn:hover {
+  background-color: #b9c3ff;
+}
+
+/* ======== ICONO PAPELERA ======== */
+.producto-cantidad img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.producto-cantidad img:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+
+/* ======== PRECIO ======== */
+.producto-precio {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1c2350;
+}
+
+/* ======== SPLIT LAYOUT ======== */
+/* Split layout: left = blanco, right = azul (#DFEAFF) */
+.container > .row > main.col-md-5 {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  min-height: calc(100vh - 100px); /* ajusta si la navbar tiene otra altura */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+/* mantener el fondo general azul en el lado derecho */
+.container > .row > aside.col-md-7 {
+  background-color: #DFEAFF;
+  padding: 2rem;
+  min-height: calc(100vh - 100px);
+  border-radius: 0 16px 16px 0;
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+  .producto-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  /* La estrella y el precio dejan de estar fijos */
+  .producto-rating,
+  .producto-precio {
+    position: static;
+    margin-top: 0.3rem;
+  }
+
+  /* Ajuste visual */
+  .producto-nombre {
+    padding-right: 0;
+  }
+
+  /* Precio abajo del todo */
+  .producto-precio {
+    align-self: flex-end;
+    margin-top: 0.5rem;
+  }
+}
