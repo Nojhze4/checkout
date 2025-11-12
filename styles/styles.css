@@ -5,26 +5,16 @@ body {
 }
 
 /* medidas base del layout */
-/*Delta Es una variable de ajuste fino o "delta". Permite mover manualmente la línea de corte 1 o 2 píxeles a la izquierda (-2px) o a la derecha (+2px) si la fórmula no queda perfectamente alineada en todos los navegadores.*/
 :root {
   --container: 1120px;
   --delta: 0px;
   --split-x: calc(
-    50vw - var(--container) * 0.5 + var(--container) * 0.4297667 + var(--delta)
+    50vw - var(--container) * 0.5 + var(--container) * 0.435 + var(--delta)
   );
-}
-
-body {
-  background: linear-gradient(
-    90deg,
-    #ffffff 0 var(--split-x),
-    #dfeaff var(--split-x) 100%
-  );
-  font-family: "Inter", sans-serif;
-  background-attachment: fixed;
 }
 
 /*NAVBAR*/
+
 .navbar {
   background: linear-gradient(
     90deg,
@@ -37,6 +27,205 @@ body {
 
 .bg-body-tertiary {
   background-color: transparent !important;
+}
+
+/* Botones navbar */
+.btn-light {
+  background: #d9deff !important;
+  color: #2b3674 !important;
+  border: none !important;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.btn-light:hover {
+  background: #c5cdff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(121, 145, 255, 0.15);
+}
+
+.btn-primary {
+  background: #7b91ff !important;
+  color: #ffffff !important;
+  border: none !important;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  background: #6a7fe6 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(123, 145, 255, 0.3);
+}
+
+/*RESUMEN (derecha)*/
+.checkout-container {
+  padding: 2rem 1.5rem;
+}
+
+.checkout-container h2,
+.resumen-titulo {
+  color: #0d1b65;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.resumen-lista {
+  margin-bottom: 20px;
+}
+
+.resumen-lista .fila {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  color: #000000;
+  font-size: 15px;
+}
+
+.resumen-lista .fila span:first-child {
+  color: #000000;
+  font-weight: 400;
+}
+
+.resumen-lista .fila span:last-child {
+  color: #000000;
+  font-weight: 500;
+}
+
+.resumen-separador {
+  border: 0;
+  height: 1px;
+  background: #d9defa;
+  margin: 16px 0 20px;
+}
+
+.resumen-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: #1c2350;
+  margin-bottom: 20px;
+  padding: 4px 0;
+}
+
+.promo {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.promo-input {
+  flex: 1;
+  height: 48px;
+  border: 1px solid #d9defa;
+  border-radius: 12px;
+  padding: 0 16px;
+  background: #ffffff;
+  color: #1c2350;
+  font-size: 14px;
+}
+
+.promo-input::placeholder {
+  color: #a0a8c8;
+}
+
+.btn-hecho {
+  height: 48px;
+  background: #6e80ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 0 24px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-hecho:hover {
+  background: #5a6ee6;
+}
+
+.btn-pagar {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  margin: 0 auto 32px;
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 28px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-pagar:hover {
+  background: #1d4ed8;
+}
+
+/*Métodos de pago*/
+.metodos h3 {
+  color: #1e2a78;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 20px;
+}
+
+.metodos-carrusel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pill-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.pill-btn:hover {
+  background: #1d4ed8;
+}
+
+.pay-box {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid #e6eafc;
+  border-radius: 16px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  min-height: 80px;
+}
+
+.pay-box img {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
 }
 
 /*LAYOUT (split)*/
@@ -59,11 +248,11 @@ body {
 }
 
 /*RESUMEN (derecha)*/
-.checkout-container h2,
-.resumen-titulo {
-  color: #1e2a78;
-  font-size: 22px;
-  font-weight: 700;
+.checkout-container {
+  padding: 8px 24px;
+}
+
+.resumen-lista {
   margin-bottom: 20px;
 }
 
@@ -71,84 +260,168 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6px 0;
-  color: #1c2350;
+  padding: 8px 0;
+  color: #000000;
   font-size: 15px;
+}
+
+.resumen-lista .fila span:first-child {
+  color: #000000;
+  font-weight: 400;
+}
+
+.resumen-lista .fila span:last-child {
+  color: #000000;
+  font-weight: 500;
 }
 
 .resumen-separador {
   border: 0;
   height: 1px;
-  background: #e1e6ff;
-  margin: 12px 0 16px;
+  background: #d9defa;
+  margin: 16px 0 20px;
 }
 
 .resumen-total {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-weight: 700;
-  color: #1c2350;
-  margin-bottom: 16px;
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 20px;
+  padding: 4px 0;
 }
 
 .promo {
   display: flex;
   gap: 12px;
-  margin-bottom: 18px;
+  margin-bottom: 24px;
 }
 
 .promo-input {
   flex: 1;
-  height: 42px;
-  border: 1px solid #d9defa;
-  border-radius: 10px;
-  padding: 0 14px;
-  background: #fff;
+  height: 48px;
+  border: 1px solid rgba(0, 0, 0, 0.33);
+  border-radius: 12px;
+  padding: 0 16px;
+  background: #ffffff;
+  color: rgba(0, 0, 0, 0.44);
+  font-size: 14px;
 }
 
+.promo-input::placeholder {
+  color: rgba(0, 0, 0, 0.44);
+  opacity: 1;
+}
+
+.promo-input:focus {
+  border-color: rgba(0, 0, 0, 0.44);
+  outline: none;
+  box-shadow: none;
+}
 .btn-hecho {
-  height: 42px;
-  background: #6e80ff;
-  color: #fff;
+  height: 48px;
+  background: #1b51bc;
+  color: #ffffff;
   border: none;
-  border-radius: 10px;
-  padding: 0 18px;
+  border-radius: 12px;
+  padding: 0 24px;
   font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-hecho:hover {
+  background: #5a6ee6;
 }
 
 .btn-pagar {
   display: block;
-  background: #6e80ff;
-  color: #fff;
+  width: 100%;
+  max-width: 240px;
+  margin: 0 auto 32px;
+  background: #1b51bc;
+  color: #ffffff;
   border: none;
   border-radius: 12px;
-  padding: 12px 22px;
+  padding: 14px 28px;
   font-weight: 700;
-  margin: 10px auto 26px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-pagar:hover {
+  background: #1d4ed8;
 }
 
 /*Métodos de pago*/
 .metodos h3 {
-  color: #1e2a78;
-  font-size: 18px;
+  color: #0d1b65;
+  font-size: 20px;
   font-weight: 700;
-  margin: 8px 0 14px;
+  margin: 0 0 20px;
 }
 
 .metodos-carrusel {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
+  margin: 24px 0 12px;
+}
+
+#methods-swiper {
+  flex: 1;
+  overflow: hidden;
+}
+
+#methods-swiper .swiper-wrapper {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 4px 2px;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+#methods-swiper .swiper-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.pill-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.pay-box {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 14px;
+  background: rgba(223, 234, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
 }
 
 .pill-btn {
-  width: 36px;
-  height: 36px;
-  border-radius: 999px;
-  border: 1px solid #d9defa;
-  background: #fff;
-  color: #1e2a78;
-  font-weight: 700;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: #1b51bc;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.pill-btn:hover {
+  background: #1846a4;
+}
+.pill-btn:focus {
+  outline: 2px solid rgba(27, 81, 188, 0.35);
+  outline-offset: 2px;
 }
 
 .pay-box {
@@ -205,7 +478,7 @@ body {
 
 .producto-nombre {
   margin: 0 0 6px;
-  color: #1c2350;
+  color: #2b3674;
   font-weight: 600;
   font-size: 15px;
 }
@@ -214,7 +487,7 @@ body {
   position: absolute;
   right: 16px;
   top: 12px;
-  color: #f5c518;
+  color: #000000;
   font-weight: 700;
 }
 
@@ -225,13 +498,18 @@ body {
 }
 
 .qty-btn {
-  width: 36px;
-  height: 36px;
-  background: #dfe3ff;
-  color: #1e2a78;
+  background-color: #7b91ff;
+  color: #ffffff;
   border: none;
-  border-radius: 10px;
-  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.producto-cantidad span {
+  color: #000000;
+  margin: 0 12px;
+  font-weight: 500;
 }
 
 .producto-cantidad img {
@@ -241,15 +519,92 @@ body {
 }
 
 .producto-precio {
-  margin: 0 16px 0 0;
+  position: absolute;
+  bottom: 14px;
+  right: 16px;
+  color: #000000;
   font-weight: 700;
-  color: #1c2350;
+  font-size: 16px;
+  margin: 0;
+}
+/*Footer*/
+
+.floating-tools {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 1050;
+  pointer-events: none;
+}
+.floating-tools .fab {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #273b8e;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  display: grid;
+  place-items: center;
+  pointer-events: auto;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.floating-tools .fab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22);
+}
+.floating-tools .fab img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
 }
 
 /*Responsive*/
+
+/* Pantallas grandes (1400px+) */
+@media (min-width: 1400px) {
+  :root {
+    --container: 1320px;
+    --delta: 0px;
+  }
+}
+
+/* Pantallas medianas-grandes (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  :root {
+    --container: 1140px;
+    --delta: -2px;
+  }
+}
+
+/* Pantallas medianas (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  :root {
+    --container: 960px;
+    --delta: -4px;
+  }
+}
+
+/* Pantallas tablet y móvil (< 992px)*/
 @media (max-width: 991px) {
   body,
   .navbar {
-    background: #ffffff;
+    background: #ffffff !important;
   }
+
+  .container > .row > aside.col-md-7 {
+    border-left: 0;
+  }
+}
+
+body {
+  background: linear-gradient(
+    90deg,
+    #ffffff 0 var(--split-x),
+    #dfeaff var(--split-x) 100%
+  );
+  font-family: "Inter", sans-serif;
+  background-attachment: fixed;
 }

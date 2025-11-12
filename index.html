@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Workcango - Tu Pedido</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,154 +19,341 @@
     />
   </head>
   <body>
+    <noscript>JavaScript is required.</noscript>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container">
-    <a class="navbar-brand" href="assets/logo-workcango.png"><img src="assets/logo-workcango.png" alt="Workcango Logo" /></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Atlas IA</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Marketplace
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#"></a></li>
-            <li><a class="dropdown-item" href="#"></a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#"></a></li>
+      <div class="container">
+        <a class="navbar-brand" href="assets/logo-workcango.png"
+          ><img src="assets/logo-workcango.png" alt="Workcango Logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Atlas IA</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Marketplace
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Let´s Grow</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Workademy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Know us</a>
+            </li>
           </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Let´s Grow</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Workademy</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Know us</a>
-        </li>
-      </ul>
-      <button type="button" class="btn btn-light">Log In</button>
-      <button type="button" class="btn btn-primary">Sign up</button>
-    </div>
-  </div>
-</nav>
-
-<div class="container">
-  <div class="row">
-    
-    <main class="col-md-5">
-      <section class="pedido-productos">
-        <h2>Tu Pedido</h2>
-      
-        <div class="producto-item">
-          <img src="./assets/gafas.svg" alt="Gafas de sol para hombre" />
-          <div class="producto-detalle">
-            <p class="producto-nombre">Gafas de sol para hombre</p>
-            <div class="producto-rating">⭐ 4.7</div>
-            <div class="producto-cantidad">
-              <button class="qty-btn">-</button>
-              <span>1</span>
-              <button class="qty-btn">+</button>
-              <img src="./assets/delete.svg" alt="Eliminar" />
-            </div>
-          </div>
-          <p class="producto-precio">$15</p>
-        </div>
-
-        <div class="producto-item">
-          <img src="./assets/zapatillas.svg" alt="Zapatillas para hombre" />
-          <div class="producto-detalle">
-            <p class="producto-nombre">Zapatillas para hombre</p>
-            <div class="producto-rating">⭐ 4.7</div>
-            <div class="producto-cantidad">
-              <button class="qty-btn">-</button>
-              <span>1</span>
-              <button class="qty-btn">+</button>
-              <img src="./assets/delete.svg" alt="Eliminar" />
-            </div>
-          </div>
-          <p class="producto-precio">$15</p>
-        </div>
-
-        <div class="producto-item">
-          <img src="./assets/reloj.svg" alt="Reloj de pulsera para hombre" />
-          <div class="producto-detalle">
-            <p class="producto-nombre">Reloj de pulsera para hombre.</p>
-            <div class="producto-rating">⭐ 4.7</div>
-            <div class="producto-cantidad">
-              <button class="qty-btn">-</button>
-              <span>1</span>
-              <button class="qty-btn">+</button>
-              <img src="./assets/delete.svg" alt="Eliminar" />
-            </div>
-          </div>
-          <p class="producto-precio">$15</p>
-        </div>
-
-        <div class="producto-item">
-          <img src="./assets/iphone.svg" alt="iPhone XS Max" />
-          <div class="producto-detalle">
-            <p class="producto-nombre">iPhone XS Max</p>
-            <div class="producto-rating">⭐ 4.7</div>
-            <div class="producto-cantidad">
-              <button class="qty-btn">-</button>
-              <span>1</span>
-              <button class="qty-btn">+</button>
-              <img src="assets/delete.svg" alt="Eliminar" />
-            </div>
-          </div>
-          <p class="producto-precio">$15</p>
-        </div>
-      </section>
-
-    </main>
-
-    <aside class="col-md-7">
-      <div class="checkout-container">
-        <h2 class="resumen-titulo">Resumen del pedido</h2>
-
-        <div class="resumen-lista">
-          <div class="fila"><span>Productos totales</span><span>4</span></div>
-          <div class="fila"><span>Precio original</span><span>$60.00</span></div>
-          <div class="fila"><span>Gastos de envío</span><span>$0.00</span></div>
-          <div class="fila"><span>Descuento</span><span>$0.00</span></div>
-        </div>
-
-        <hr class="resumen-separador" />
-
-        <div class="resumen-total"><span>Total</span><span>$60</span></div>
-
-        <div class="promo">
-          <input class="promo-input" placeholder="Agregar código promocional">
-          <button class="btn-hecho">Hecho</button>
-        </div>
-
-        <button class="btn-pagar">Pagar ahora</button>
-
-        <div class="metodos">
-          <h3>Métodos de pago aceptados</h3>
-          <div class="metodos-carrusel">
-            <button class="pill-btn">&#8249;</button>
-            <div class="pay-box">
-              <img src="assets/visa.svg" alt="VISA" height="26">
-              <img src="assets/amex.svg" alt="AMEX" height="26">
-              <img src="assets/mastercard.svg" alt="Mastercard" height="26">
-              <img src="assets/paypal.svg" alt="PayPal" height="26">
-            </div>
-            <button class="pill-btn">&#8250;</button>
+          <div class="d-flex gap-2">
+            <button type="button" class="btn btn-light">Log In</button>
+            <button type="button" class="btn btn-primary">Sign up</button>
           </div>
         </div>
       </div>
-    </aside>
-    
-  </div>
-</div>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <main class="col-md-5">
+          <section class="pedido-productos">
+            <h2>Tu Pedido</h2>
+
+            <div class="producto-item" data-price-id="price_12345">
+              <img src="./assets/gafas.svg" alt="Gafas de sol para hombre" />
+              <div class="producto-detalle">
+                <p class="producto-nombre">Gafas de sol para hombre</p>
+                <div class="producto-rating">⭐ 4.7</div>
+                <div class="producto-cantidad">
+                  <button class="qty-btn">-</button>
+                  <span>1</span>
+                  <button class="qty-btn">+</button>
+                  <img src="./assets/delete.svg" alt="Eliminar" />
+                </div>
+              </div>
+              <p class="producto-precio">$15</p>
+            </div>
+
+            <div class="producto-item" data-price-id="price_12345">
+              <img src="./assets/zapatillas.svg" alt="Zapatillas para hombre" />
+              <div class="producto-detalle">
+                <p class="producto-nombre">Zapatillas para hombre</p>
+                <div class="producto-rating">⭐ 4.7</div>
+                <div class="producto-cantidad">
+                  <button class="qty-btn">-</button>
+                  <span>1</span>
+                  <button class="qty-btn">+</button>
+                  <img src="./assets/delete.svg" alt="Eliminar" />
+                </div>
+              </div>
+              <p class="producto-precio">$15</p>
+            </div>
+
+            <div class="producto-item" data-price-id="price_12345">
+              <img
+                src="./assets/reloj.svg"
+                alt="Reloj de pulsera para hombre"
+              />
+              <div class="producto-detalle">
+                <p class="producto-nombre">Reloj de pulsera para hombre.</p>
+                <div class="producto-rating">⭐ 4.7</div>
+                <div class="producto-cantidad">
+                  <button class="qty-btn">-</button>
+                  <span>1</span>
+                  <button class="qty-btn">+</button>
+                  <img src="./assets/delete.svg" alt="Eliminar" />
+                </div>
+              </div>
+              <p class="producto-precio">$15</p>
+            </div>
+
+            <div class="producto-item" data-price-id="price_12345">
+              <img src="./assets/iphone.svg" alt="iPhone XS Max" />
+              <div class="producto-detalle">
+                <p class="producto-nombre">iPhone XS Max</p>
+                <div class="producto-rating">⭐ 4.7</div>
+                <div class="producto-cantidad">
+                  <button class="qty-btn">-</button>
+                  <span>1</span>
+                  <button class="qty-btn">+</button>
+                  <img src="assets/delete.svg" alt="Eliminar" />
+                </div>
+              </div>
+              <p class="producto-precio">$15</p>
+            </div>
+          </section>
+        </main>
+
+        <aside class="col-md-7">
+          <div class="checkout-container">
+            <h2 class="resumen-titulo">Resumen del pedido</h2>
+
+            <div class="resumen-lista">
+              <div class="fila">
+                <span>Productos totales</span>
+                <span>4</span>
+              </div>
+              <div class="fila">
+                <span>Precio original</span>
+                <span>$60.00</span>
+              </div>
+              <div class="fila">
+                <span>Gastos de envío</span>
+                <span>$0.00</span>
+              </div>
+              <div class="fila">
+                <span>Descuento</span>
+                <span>$0.00</span>
+              </div>
+            </div>
+
+            <hr class="resumen-separador" />
+
+            <div class="resumen-total">
+              <span>Total</span>
+              <span>$60</span>
+            </div>
+
+            <div class="promo">
+              <input
+                class="promo-input"
+                type="text"
+                placeholder="Agregar código promocional"
+              />
+              <button class="btn-hecho">Hecho</button>
+            </div>
+
+            <button class="btn-pagar">Pagar ahora</button>
+              <h2>Métodos de pago aceptados</h2>  
+            <div class="metodos-carrusel">
+              <button class="pill-btn" id="methods-prev" aria-label="Anterior">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 19.5 8.25 12l7.5-7.5"
+                  />
+                </svg>
+              </button>
+
+              <div class="swiper" id="methods-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <span class="pay-box"
+                      ><img
+                        src="https://app.workcango.co/build/assets/visa-CKmx6KTW.svg"
+                        alt="Visa"
+                        height="24"
+                        class="inline-block h-6 w-auto"
+                    /></span>
+                  </div>
+                  <div class="swiper-slide">
+                    <span class="pay-box"
+                      ><img
+                        src="https://app.workcango.co/build/assets/american-express-BMZQPafJ.svg"
+                        alt="American Express"
+                        height="24"
+                        class="inline-block h-6 w-auto"
+                    /></span>
+                  </div>
+                  <div class="swiper-slide">
+                    <span class="pay-box"
+                      ><img
+                        src="https://app.workcango.co/build/assets/baloto-CtGrIcKl.png"
+                        alt="Baloto"
+                        height="24"
+                        class="inline-block h-6 w-auto"
+                    /></span>
+                  </div>
+                  <div class="swiper-slide">
+                    <span class="pay-box"
+                      ><img
+                        src="https://app.workcango.co/build/assets/codensa-Ttkr9sQu.png"
+                        alt="Codensa"
+                        height="24"
+                        class="inline-block h-6 w-auto"
+                    /></span>
+                  </div>
+                  <div class="swiper-slide">
+                    <span class="pay-box"
+                      ><img
+                        src="https://app.workcango.co/build/assets/daviplata-B_8cCa0J.svg"
+                        alt="DaviPlata"
+                        height="24"
+                        class="inline-block h-6 w-auto"
+                    /></span>
+                  </div>
+                  <div class="swiper-slide">
+                    <span class="pay-box"
+                      ><img
+                        src="https://app.workcango.co/build/assets/davivienda-C-sqfvoA.webp"
+                        alt="DaviVienda"
+                        height="24"
+                        class="inline-block h-6 w-auto"
+                    /></span>
+                  </div>
+                  <div class="swiper-slide">
+                    <span class="pay-box"
+                      ><img
+                        src="https://app.workcango.co/build/assets/efecty-D0QBjoHy.svg"
+                        alt="Efecty"
+                        height="24"
+                        class="inline-block h-6 w-auto"
+                    /></span>
+                  </div>
+                  <div class="swiper-slide">
+                    <span class="pay-box"
+                      ><img
+                        src="https://app.workcango.co/build/assets/gana-Dr9jNYuF.png"
+                        alt="Gana"
+                        height="24"
+                        class="inline-block h-6 w-auto"
+                    /></span>
+                  </div>
+                  <div class="swiper-slide">
+                    <span class="pay-box"
+                      ><img
+                        src="https://app.workcango.co/build/assets/mastercard-CDH-3EVP.svg"
+                        alt="MasterCard"
+                        height="24"
+                        class="inline-block h-6 w-auto"
+                    /></span>
+                  </div>
+                  <div class="swiper-slide">
+                    <span class="pay-box"
+                      ><img
+                        src="https://app.workcango.co/build/assets/paypal-isXYT9QT.svg"
+                        alt="PayPal"
+                        height="24"
+                        class="inline-block h-6 w-auto"
+                    /></span>
+                  </div>
+                  <div class="swiper-slide">
+                    <span class="pay-box"
+                      ><img
+                        src="https://app.workcango.co/build/assets/pse-CGg3zxV0.png"
+                        alt="PSE"
+                        height="24"
+                        class="inline-block h-6 w-auto"
+                    /></span>
+                  </div>
+                  <div class="swiper-slide">
+                    <span class="pay-box"
+                      ><img
+                        src="https://app.workcango.co/build/assets/sured-BY3JlbZF.png"
+                        alt="Su Red"
+                        height="24"
+                        class="inline-block h-6 w-auto"
+                    /></span>
+                  </div>
+                </div>
+              </div>
+
+              <button class="pill-btn" id="methods-next" aria-label="Siguiente">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <footer class="floating-tools">
+      <img class="fab" src="assets/chatbot.png" alt="chatbot" />
+      <img class="fab" src="assets/translate.png" alt="translate" />
+    </footer>
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script defer src="scripts/methods.js"></script>
+    <script defer src="scripts/script.js"></script>
+    <script defer src="scripts/stripe.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   </body>
 </html>
