@@ -15,7 +15,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
+  <div class="container">
     <a class="navbar-brand" href="assets/logo-workcango.png"><img src="assets/logo-workcango.png" alt="Workcango Logo" /></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -124,59 +124,40 @@
 
     <aside class="col-md-7">
       <div class="checkout-container">
-    
-        <section class="resumen-pago">
-          <h2>Resumen del pedido</h2>
-    
-          <div class="resumen-desglose">
-            <div class="resumen-linea">
-              <span>Productos totales</span>
-              <span>4</span>
-            </div>
-            <div class="resumen-linea">
-              <span>Precio original</span>
-              <span>$60.00</span>
-            </div>
-            <div class="resumen-linea">
-              <span>Gastos de envío</span>
-              <span>$0.00</span>
-            </div>
-            <div class="resumen-linea">
-              <span>Descuento</span>
-              <span>$0.00</span>
-            </div>
-          </div>
-    
-          <div class="resumen-total">
-            <span class="label">Total</span>
-            <span class="monto">$60</span>
-          </div>
-    
-          <div class="promo-container">
-            <input
-              type="text"
-              placeholder="Agregar código promocional"
-              class="promo-input"
-            />
-            <button class="btn-promo">Hecho</button>
-          </div>
-    
-          <button class="btn-pagar">Pagar ahora</button>
-    
-          <hr />
-    
-          <h3>Métodos de pago aceptados</h3>
-          <div class="metodos-pago">
-            <button class="arrow-btn">&lt;</button>
-            <img src="./assets/visa.png" alt="Visa" />
-            <img src="./assets/amex.svg" alt="American Express" />
-            <img src="./assets/master.svg" alt="Mastercard" />
-            <img src="./assets/paypal.svg" alt="Paypal" />
-            <button class="arrow-btn">&gt;</button>
-          </div>
-        </section>
-      </div>
+        <h2 class="resumen-titulo">Resumen del pedido</h2>
 
+        <div class="resumen-lista">
+          <div class="fila"><span>Productos totales</span><span>4</span></div>
+          <div class="fila"><span>Precio original</span><span>$60.00</span></div>
+          <div class="fila"><span>Gastos de envío</span><span>$0.00</span></div>
+          <div class="fila"><span>Descuento</span><span>$0.00</span></div>
+        </div>
+
+        <hr class="resumen-separador" />
+
+        <div class="resumen-total"><span>Total</span><span>$60</span></div>
+
+        <div class="promo">
+          <input class="promo-input" placeholder="Agregar código promocional">
+          <button class="btn-hecho">Hecho</button>
+        </div>
+
+        <button class="btn-pagar">Pagar ahora</button>
+
+        <div class="metodos">
+          <h3>Métodos de pago aceptados</h3>
+          <div class="metodos-carrusel">
+            <button class="pill-btn">&#8249;</button>
+            <div class="pay-box">
+              <img src="assets/visa.svg" alt="VISA" height="26">
+              <img src="assets/amex.svg" alt="AMEX" height="26">
+              <img src="assets/mastercard.svg" alt="Mastercard" height="26">
+              <img src="assets/paypal.svg" alt="PayPal" height="26">
+            </div>
+            <button class="pill-btn">&#8250;</button>
+          </div>
+        </div>
+      </div>
     </aside>
     
   </div>
