@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const spDesc = filas[3]?.querySelector("span:last-child");
   const spTotal = $(".resumen-total span:last-child");
 
-  const money = (n) => `$${n.toFixed(2)}`;
+  const money = (n) => `$${Math.round(n)}`;
 
   function getItems() {
     return $$(".pedido-productos .producto-item");
@@ -26,9 +26,35 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function getUnitPrice(item) {
-    const t = $(".producto-precio", item)?.textContent || "$0";
-    const num = parseFloat(t.replace(/[^\d.]/g, "")) || 0;
-    return num;
+    // Obtener el precio unitario base (siempre será el precio original dividido por la cantidad actual)
+    const priceElement = $(".producto-precio", item);
+    if (!priceElement) return 0;
+    
+    // Si el elemento tiene un atributo data-unit-price, usarlo
+    if (priceElement.dataset.unitPrice) {
+      return parseFloat(priceElement.dataset.unitPrice) || 0;
+    }
+    
+    // Si no, calcular el precio unitario basado en el precio actual y cantidad
+    const currentPrice = parseFloat(priceElement.textContent.replace(/[^\d.]/g, "")) || 0;
+    const currentQty = getQty(item);
+    const unitPrice = currentQty > 0 ? currentPrice / currentQty : currentPrice;
+    
+    // Guardar el precio unitario para futuras referencias
+    priceElement.dataset.unitPrice = unitPrice.toString();
+    
+    return unitPrice;
+  }
+
+  function updateProductPrice(item) {
+    const priceElement = $(".producto-precio", item);
+    if (!priceElement) return;
+    
+    const unitPrice = getUnitPrice(item);
+    const qty = getQty(item);
+    const totalPrice = unitPrice * qty;
+    
+    priceElement.textContent = money(totalPrice);
   }
 
   function updateResumen() {
@@ -65,6 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (btn.textContent.trim() === "+") n++;
       else n = Math.max(1, n - 1);
       span.textContent = String(n);
+      updateProductPrice(item); // Actualizar precio del producto
       updateResumen();
       return;
     }
@@ -77,5 +104,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Inicializar precios unitarios al cargar la página
+  function initializeUnitPrices() {
+    const items = getItems();
+    items.forEach(item => {
+      const priceElement = $(".producto-precio", item);
+      if (priceElement && !priceElement.dataset.unitPrice) {
+        const currentPrice = parseFloat(priceElement.textContent.replace(/[^\d.]/g, "")) || 0;
+        priceElement.dataset.unitPrice = currentPrice.toString();
+      }
+    });
+  }
+
+  initializeUnitPrices();
   updateResumen();
 });

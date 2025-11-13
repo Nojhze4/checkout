@@ -486,7 +486,7 @@ body {
 .producto-rating {
   position: absolute;
   right: 16px;
-  top: 12px;
+  top: 20px;
   color: #000000;
   font-weight: 700;
 }
@@ -596,6 +596,247 @@ body {
 
   .container > .row > aside.col-md-7 {
     border-left: 0;
+  }
+
+  /* Ajuste de la calificación para móvil */
+  .producto-rating {
+    top: 16px;
+    right: 14px;
+    font-size: 13px;
+  }
+
+  /* Botones de cantidad más pequeños en móvil */
+  .qty-btn {
+    padding: 4px 8px;
+    font-size: 14px;
+    min-width: 28px;
+    height: 28px;
+  }
+
+  /* Reposicionar botones debajo de métodos de pago en móvil */
+  .floating-tools {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+    margin: 16px 0 0 0;
+    width: 100%;
+    pointer-events: auto;
+  }
+
+  .floating-tools .fab {
+    width: 44px;
+    height: 44px;
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #1b51bc;
+  }
+
+  .floating-tools .fab img {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Asegurar que aparezcan después de métodos de pago */
+  .metodos-carrusel {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 24px 0 12px;
+  }
+}
+
+/* Pantallas muy pequeñas (< 400px) - Evitar scroll horizontal */
+@media (max-width: 399px) {
+  .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .col-md-5, .col-md-7 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Productos más compactos */
+  .producto-item {
+    padding: 12px 8px;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .producto-item img:first-child {
+    width: 70px;
+    height: 70px;
+  }
+
+  .producto-nombre {
+    font-size: 14px;
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+
+  .producto-rating {
+    top: 12px;
+    right: 8px;
+    font-size: 12px;
+  }
+
+  .producto-precio {
+    font-size: 15px;
+    bottom: 12px;
+    right: 8px;
+  }
+
+  /* Controles de cantidad más compactos */
+  .producto-cantidad {
+    gap: 6px;
+  }
+
+  .qty-btn {
+    padding: 3px 6px;
+    font-size: 12px;
+    min-width: 24px;
+    height: 24px;
+  }
+
+  .producto-cantidad span {
+    margin: 0 8px;
+    font-size: 14px;
+  }
+
+  .producto-cantidad img {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Checkout container */
+  .checkout-container {
+    padding: 16px 8px;
+  }
+
+  .pedido-productos h2,
+  .resumen-titulo {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  /* Resumen más compacto */
+  .resumen-lista .fila {
+    font-size: 14px;
+    padding: 6px 0;
+  }
+
+  .resumen-total {
+    font-size: 16px;
+  }
+
+  /* Promo input */
+  .promo {
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .promo-input {
+    height: 44px;
+    font-size: 14px;
+    padding: 0 12px;
+  }
+
+  .btn-hecho {
+    height: 44px;
+    padding: 0 16px;
+    font-size: 14px;
+  }
+
+  /* Botón pagar */
+  .btn-pagar {
+    padding: 14px 20px;
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  /* Métodos de pago */
+  .metodos-carrusel {
+    gap: 8px;
+    margin: 20px 0 12px;
+  }
+
+  .pill-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .pay-box {
+    padding: 12px 14px;
+    gap: 16px;
+  }
+
+  .pay-box img {
+    height: 28px;
+  }
+
+  /* Botones centrados para pantallas muy pequeñas */
+  .floating-tools {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    margin: 12px 0 0 0;
+    width: 100%;
+  }
+
+  .floating-tools .fab {
+    width: 40px;
+    height: 40px;
+    position: static;
+    background: #1b51bc;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
+
+  .floating-tools .fab:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .floating-tools .fab img {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Métodos de pago normales para pantallas pequeñas */
+  .metodos-carrusel {
+    gap: 8px;
+    margin: 20px 0 12px;
+  }
+
+  /* Navbar responsive */
+  .navbar .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .navbar-brand img {
+    max-height: 32px;
+  }
+
+  .btn-light, .btn-primary {
+    padding: 8px 16px;
+    font-size: 14px;
   }
 }
 
