@@ -14,7 +14,7 @@
   function getLineItems() {
     const nodes = document.querySelectorAll('.pedido-productos .producto-item');
     return Array.from(nodes).map(item => {
-      const price = item.dataset.priceId; // price_xxx de Stripe
+      const price = item.dataset.priceId; 
       const qty = parseInt(item.querySelector('.producto-cantidad span')?.textContent || '1', 10) || 1;
       return price ? { price, quantity: qty } : null;
     }).filter(Boolean);

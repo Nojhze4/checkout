@@ -1,112 +1,124 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pagar con Stripe - Payment Element</title>
-  <link rel="stylesheet" href="styles/stripe.css">
-  <script src="https://js.stripe.com/v3/"></script>
-  <script defer src="scripts/stripe.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagar con Stripe - Payment Element</title>
+    <link rel="stylesheet" href="styles/stripe.css" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <script defer src="scripts/stripe.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Completar Pago</h1>
 
-</head>
-<body>
-  <div class="container">
-    <h1>Completar Pago</h1>
-    
-    <div class="pedido-productos">
-      <h3 style="margin-top: 0; color: #32325d;">Resumen del Pedido</h3>
-      
-      <div class="producto-item" data-price-id="price_1QSPCaP7YpqIYI4aGafas001">
+      <div class="pedido-productos">
+        <h3 style="margin-top: 0; color: #32325d">Resumen del Pedido</h3>
+
+        <div
+          class="producto-item"
+          data-price-id="price_1QSPCaP7YpqIYI4aGafas001"
+        >
+          <div class="order-item">
+            <span>Gafas de sol para hombre</span>
+            <span>$15.00</span>
+          </div>
+          <div class="producto-cantidad" style="display: none">
+            <span>1</span>
+          </div>
+        </div>
+
+        <div
+          class="producto-item"
+          data-price-id="price_1QSPCaP7YpqIYI4aZapat001"
+        >
+          <div class="order-item">
+            <span>Zapatillas para hombre</span>
+            <span>$15.00</span>
+          </div>
+          <div class="producto-cantidad" style="display: none">
+            <span>1</span>
+          </div>
+        </div>
+
+        <div
+          class="producto-item"
+          data-price-id="price_1QSPCaP7YpqIYI4aReloj001"
+        >
+          <div class="order-item">
+            <span>Reloj de pulsera para hombre</span>
+            <span>$15.00</span>
+          </div>
+          <div class="producto-cantidad" style="display: none">
+            <span>1</span>
+          </div>
+        </div>
+
+        <div
+          class="producto-item"
+          data-price-id="price_1QSPCaP7YpqIYI4aiPhon001"
+        >
+          <div class="order-item">
+            <span>iPhone XS Max</span>
+            <span>$15.00</span>
+          </div>
+          <div class="producto-cantidad" style="display: none">
+            <span>1</span>
+          </div>
+        </div>
+
         <div class="order-item">
-          <span>Gafas de sol para hombre</span>
-          <span>$15.00</span>
+          <span>Gastos de envío</span>
+          <span>$0.00</span>
         </div>
-        <div class="producto-cantidad" style="display: none;">
-          <span>1</span>
-        </div>
-      </div>
-      
-      <div class="producto-item" data-price-id="price_1QSPCaP7YpqIYI4aZapat001">
-        <div class="order-item">
-          <span>Zapatillas para hombre</span>
-          <span>$15.00</span>
-        </div>
-        <div class="producto-cantidad" style="display: none;">
-          <span>1</span>
+        <div class="order-item order-total">
+          <span>Total</span>
+          <span>$60.00</span>
         </div>
       </div>
-      
-      <div class="producto-item" data-price-id="price_1QSPCaP7YpqIYI4aReloj001">
-        <div class="order-item">
-          <span>Reloj de pulsera para hombre</span>
-          <span>$15.00</span>
+      <hr />
+
+      <form id="payment-form">
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="correo@ejemplo.com"
+            required
+            autocomplete="email"
+          />
         </div>
-        <div class="producto-cantidad" style="display: none;">
-          <span>1</span>
+
+        <div class="form-group">
+          <label for="name">Nombre completo</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Nombre completo"
+            required
+            autocomplete="name"
+          />
         </div>
-      </div>
-      
-      <div class="producto-item" data-price-id="price_1QSPCaP7YpqIYI4aiPhon001">
-        <div class="order-item">
-          <span>iPhone XS Max</span>
-          <span>$15.00</span>
+
+        <div class="payment-info">
+          <p>
+            <strong>Método de pago:</strong> Se procesará con Stripe Checkout
+          </p>
+          <p>
+            Al hacer clic en "Proceder al pago", serás redirigido a la página
+            segura de Stripe para completar tu pago.
+          </p>
         </div>
-        <div class="producto-cantidad" style="display: none;">
-          <span>1</span>
-        </div>
-      </div>
-      
-      <div class="order-item">
-        <span>Gastos de envío</span>
-        <span>$0.00</span>
-      </div>
-      <div class="order-item order-total">
-        <span>Total</span>
-        <span>$60.00</span>
-      </div>
+
+        <button id="submit" class="btn-pagar">
+          <span id="button-text">Proceder al pago</span>
+        </button>
+
+        <div id="payment-message" class="hidden"></div>
+      </form>
     </div>
-
-    <div class="payment-methods-info">
-      <h3>Payment Element de Stripe</h3>
-      <p>Acepta más de 100 métodos de pago de todo el mundo con un componente seguro e integrable. Incluye validación automática y gestión de errores.</p>
-    </div>
-
-    <form id="payment-form">
-      <div class="form-group">
-        <label for="email">Correo electrónico</label>
-        <input 
-          id="email" 
-          name="email" 
-          type="email" 
-          placeholder="correo@ejemplo.com" 
-          required 
-          autocomplete="email"
-        />
-      </div>
-
-      <div class="form-group">
-        <label for="name">Nombre completo</label>
-        <input 
-          id="name" 
-          name="name" 
-          type="text" 
-          placeholder="Nombre completo" 
-          required 
-          autocomplete="name"
-        />
-      </div>
-
-      <div class="payment-info">
-        <p><strong>Método de pago:</strong> Se procesará con Stripe Checkout</p>
-        <p>Al hacer clic en "Proceder al pago", serás redirigido a la página segura de Stripe para completar tu pago.</p>
-      </div>
-
-      <button id="submit" class="btn-pagar">
-        <span id="button-text">Proceder al pago</span>
-      </button>
-      
-      <div id="payment-message" class="hidden"></div>
-    </form>
-  </div>
-</body>
+  </body>
 </html>
