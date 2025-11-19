@@ -20,11 +20,11 @@
   </head>
   <body>
     <noscript>JavaScript is required.</noscript>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<div class="card text-bg-light">
+  <img src="assets/workcango.png" class="card-img" alt="logo-workcango">
+</div>
+    <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container">
-        <a class="navbar-brand" href="assets/logo-workcango.png">
-          <img src="assets/logo-workcango.png" alt="Workcango Logo" />
-        </a>
 
         <button
           class="navbar-toggler"
@@ -44,7 +44,7 @@
           aria-labelledby="offcanvasNavbarLabel"
         >
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
             <button
               type="button"
               class="btn-close"
@@ -56,9 +56,7 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
-                  >Atlas IA</a
-                >
+                <a class="nav-link active" aria-current="page" href="#">Atlas IA</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -71,10 +69,10 @@
                   Marketplace
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#"></a></li>
-                  <li><a class="dropdown-item" href="#"></a></li>
+                  <li><a class="dropdown-item" href="#">Productos</a></li>
+                  <li><a class="dropdown-item" href="#">Servicios</a></li>
                   <li><hr class="dropdown-divider" /></li>
-                  <li><a class="dropdown-item" href="#"></a></li>
+                  <li><a class="dropdown-item" href="#">Ofertas</a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -88,16 +86,14 @@
               </li>
             </ul>
 
-            <div class="d-flex flex-column flex-lg-row gap-2">
-              <button type="button" class="btn btn-light">
-                Iniciar sesión
-              </button>
+            <div class="d-flex flex-column flex-lg-row gap-2 align-items-center">
+              <button type="button" class="btn btn-light">Iniciar sesión</button>
               <button type="button" class="btn btn-primary">Regístrate</button>
             </div>
           </div>
         </div>
       </div>
-    </nav>
+    </nav> -->
     <div class="container">
       <div class="row">
         <main class="col-md-5">
@@ -367,14 +363,70 @@
 
     <footer class="floating-tools">
       <a href="https://wa.me/573135572942" target="_blank" class="fab">
-        <img src="assets/chatbot.png" alt="chatbot" />
-      </a>
-      <img
-        class="fab"
-        src="assets/translate.png"
-        alt="translate"
-        id="translateBtn"
-      />
+      <img src="assets/chatbot.png" alt="chatbot" width="60"/>
+    </a>
+    <div class="dropdown language-selector fab">
+                <button
+                  class="btn-language-footer"
+                  type="button"
+                  id="languageDropdown"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                ><img src="assets/translate.png" alt="translate" />
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end language-menu" aria-labelledby="languageDropdown">
+                  <li><a class="dropdown-item" href="#" data-lang="es">🇪🇸 Español</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="en">🇬🇧 English</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="zh">🇨🇳 中文 (Chinese)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="hi">🇮🇳 हिन्दी (Hindi)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="ar">🇸🇦 العربية (Arabic)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="pt">🇧🇷 Português</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="bn">🇧🇩 বাংলা (Bengali)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="ru">🇷🇺 Русский (Russian)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="ja">🇯🇵 日本語 (Japanese)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="pa">🇮🇳 ਪੰਜਾਬੀ (Punjabi)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="de">🇩🇪 Deutsch (German)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="jv">🇮🇩 Basa Jawa (Javanese)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="ko">🇰🇷 한국어 (Korean)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="fr">🇫🇷 Français (French)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="te">🇮🇳 తెలుగు (Telugu)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="mr">🇮🇳 मराठी (Marathi)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="tr">🇹🇷 Türkçe (Turkish)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="ta">🇮🇳 தமிழ் (Tamil)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="vi">🇻🇳 Tiếng Việt (Vietnamese)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="ur">🇵🇰 اردو (Urdu)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="it">🇮🇹 Italiano (Italian)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="th">🇹🇭 ไทย (Thai)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="gu">🇮🇳 ગુજરાતી (Gujarati)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="pl">🇵🇱 Polski (Polish)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="uk">🇺🇦 Українська (Ukrainian)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="ml">🇮🇳 മലയാളം (Malayalam)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="kn">🇮🇳 ಕನ್ನಡ (Kannada)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="or">🇮🇳 ଓଡ଼ିଆ (Odia)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="my">🇲🇲 မြန်မာဘာသာ (Burmese)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="fa">🇮🇷 فارسی (Persian)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="ro">🇷🇴 Română (Romanian)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="nl">🇳🇱 Nederlands (Dutch)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="ha">🇳🇬 Hausa</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="ms">🇲🇾 Bahasa Melayu (Malay)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="sw">🇰🇪 Kiswahili (Swahili)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="su">🇮🇩 Basa Sunda (Sundanese)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="yo">🇳🇬 Yorùbá (Yoruba)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="am">🇪🇹 አማርኛ (Amharic)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="az">🇦🇿 Azərbaycan (Azerbaijani)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="uz">🇺🇿 Oʻzbekcha (Uzbek)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="ig">🇳🇬 Igbo</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="ne">🇳🇵 नेपाली (Nepali)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="si">🇱🇰 සිංහල (Sinhala)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="km">🇰🇭 ខ្មែរ (Khmer)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="tl">🇵🇭 Tagalog (Filipino)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="el">🇬🇷 Ελληνικά (Greek)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="cs">🇨🇿 Čeština (Czech)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="sv">🇸🇪 Svenska (Swedish)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="hu">🇭🇺 Magyar (Hungarian)</a></li>
+                  <li><a class="dropdown-item" href="#" data-lang="he">🇮🇱 עברית (Hebrew)</a></li>
+                </ul>
+              </div>
     </footer>
 
     <script defer src="scripts/methods.js"></script>
